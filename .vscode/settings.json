@@ -16,7 +16,6 @@
    "files.autoSave": "afterDelay",
    "workbench.colorTheme": "Wildberries Darker",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify",
    "editor.wordWrap": "on",
    "workbench.colorCustomizations": {
 
@@ -26,5 +25,18 @@
    "editor.formatOnPaste": true,
    "editor.formatOnSave": true,
    "python.createEnvironment.trigger": "prompt",
-   "python.terminal.activateEnvInCurrentTerminal": true
+   "python.terminal.activateEnvInCurrentTerminal": true,
+   "editor.codeActionsOnSave": {
+      "source.fixAll": true
+   },
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+   },
+   "black-formatter.args": [
+      "--max-line-length=80 "
+   ],
+   "flake8.args": [
+      "--max-line-length=120",
+      "--ignore=E402,F841,F401,E302,E305"
+   ],
 }
